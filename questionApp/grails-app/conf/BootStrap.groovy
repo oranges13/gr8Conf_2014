@@ -2,6 +2,7 @@ import com.opi.Question
 import com.opi.User
 import groovy.time.TimeDuration
 import groovy.time.TimeCategory
+import grails.rest.render.json.*
 
 class BootStrap {
 	def sessionFactory
@@ -46,7 +47,16 @@ class BootStrap {
 		// Simple example with composite primary key
 		//        User user = User.get(new User(email: 'bob@objectpartners.com', userName: 'bobmarley'))
 		//        println user
-
+		
+		JSON.registerObjectMarshaller(User) {
+			def map=[:]
+			map['username']= it.username
+			map['firstName'] = it.firstName
+			map['lastName'] = it.lastName
+			map['email']= it.email
+			return map
+		}
+		
 	}
 	def destroy = {
 	}
