@@ -1,5 +1,13 @@
 <%@ page import="com.opi.Question" %>
 
+<div class="fieldcontain ${hasErrors(bean: questionInstance, field: 'title', 'error')} required">
+	<label for="title">
+		<g:message code="question.title.label" default="Title" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="title" required="" value="${questionInstance?.title}"/>
+
+</div>
 
 
 <div class="fieldcontain ${hasErrors(bean: questionInstance, field: 'answer', 'error')} required">
