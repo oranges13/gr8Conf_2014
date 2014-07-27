@@ -19,9 +19,6 @@
 
 
 
-                <%-- Uncomment this form when you are on the Form Exercise --%>
-                <%--
-
                 <g:form action="save" class="form-horizontal" role="form">
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">Full Name</label>
@@ -37,6 +34,7 @@
                         <div class="col-sm-10">
 
                             <!-- textField email here -->
+                            <g:textField name="email" value="" class="form-control"/>
 
                         </div>
                     </div>
@@ -45,6 +43,7 @@
                         <div class="col-sm-10">
 
                             <!-- textField phone here -->
+                            <g:textField name="phone" value="" class="form-control" />
 
                         </div>
                     </div>
@@ -53,15 +52,12 @@
                         <div class="col-sm-10">
 
                             <!-- textArea for note here -->
+                            <g:textArea name="note" class="form-control"></g:textArea>
 
                         </div>
                     </div>
                     <g:submitButton name="create" class="save" value="Send" />
                 </g:form>
-
-                --%>
-
-
 
             </div>
         </div>
